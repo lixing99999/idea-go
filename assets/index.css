@@ -1,0 +1,126 @@
+.main {
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  display: flex;
+  padding: 35px;
+}
+
+.main > div {
+  width: 100%;
+}
+
+.pagination {
+  font-family: var(--roboto-mono);
+  color: var(--gray);
+  font-size: 20px;
+}
+
+.project-author {
+  font-family: var(--roboto-mono);
+  color: var(--orange);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.project-name {
+  font-family: var(--roboto);
+  color: var(--gray);
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.project-content {
+  min-height: 15rem;
+  max-height: 15rem;
+}
+
+.comment-title {
+  color: var(--darkgrey);
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.comment {
+  max-height: 200px;
+  min-height: 200px;
+}
+
+.comment > div > div > span {
+  font-family: var(--roboto-mono);
+  color: var(--orange);
+  font-size: 20px;
+  margin-right: 0.5rem;
+}
+
+.comment > div > div {
+  color: var(--gray);
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.comment-empty {
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--gray);
+}
+
+.el-input__inner {
+  -webkit-appearance: none;
+  font-family: var(--roboto-mono);
+  background-color: var(--darkblue) !important;
+  background-image: none;
+  border: 3px dashed var(--orange);
+  box-sizing: border-box;
+  color: var(--gray);
+  display: inline-block;
+  font-size: 15px;
+  height: 50px;
+  line-height: 40px;
+  outline: 0;
+  padding: 0 15px;
+  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  width: 100%;
+  font-weight: bold;
+}
+
+.el-input__inner:focus {
+  border-color: var(--orange);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.el-dialog,
+.el-pager li {
+  background-color: var(--darkblue);
+}
+
+.welcome{
+    font-weight: bold;
+    font-size: 25px;
+    color : var(--gray);
+    font-family: var(--roboto);
+}
+
+.welcome > span {
+    color : var(--orange);
+    font-family : var(--roboto-mono);
+    font-size : 25px;
+    font-weight : bold;
+}
+
+.el-dialog__header{
+    padding: 0;
+}
+
+.form-1{
+    min-height: 200px;
+    max-height: 200px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+

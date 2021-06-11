@@ -1,0 +1,22 @@
+{
+  "name": "idea-go",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.1",
+    "core-js": "^3.9.1",
+    "element-ui": "^2.15.1",
+    "moment": "^2.29.1",
+    "nuxt": "^2.15.3",
+    "nuxt-socket-io": "^1.1.18",
+    "vue-lodash": "^2.1.2",
+    "vue-moment": "^4.1.0"
+  },
+  "devDependencies": {}
+}
