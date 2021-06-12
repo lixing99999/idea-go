@@ -13,20 +13,20 @@
 .pagination {
   font-family: var(--roboto-mono);
   color: var(--gray);
-  font-size: 20px;
+  font-size: var(--text-sm);
 }
 
 .project-author {
   font-family: var(--roboto-mono);
   color: var(--orange);
-  font-size: 20px;
+  font-size: var(--text-sm);
   font-weight: bold;
 }
 
 .project-name {
   font-family: var(--roboto);
   color: var(--gray);
-  font-size: 40px;
+  font-size: var(--text-lg);
   font-weight: bold;
   line-height: 1;
 }
@@ -38,7 +38,7 @@
 
 .comment-title {
   color: var(--darkgrey);
-  font-size: 25px;
+  font-size: var(--text-md);
   font-weight: bold;
 }
 
@@ -50,18 +50,18 @@
 .comment > div > div > span {
   font-family: var(--roboto-mono);
   color: var(--orange);
-  font-size: 20px;
+  font-size: var(--text-sm);
   margin-right: 0.5rem;
 }
 
 .comment > div > div {
   color: var(--gray);
-  font-size: 25px;
+  font-size: var(--text-md);
   font-weight: bold;
 }
 
 .comment-empty {
-  font-size: 25px;
+  font-size: var(--text-md);
   font-weight: bold;
   color: var(--gray);
 }

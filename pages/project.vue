@@ -1,6 +1,6 @@
 <template>
-  <div class="project px-4 mt-5">
-    <div
+  <div class="project px-4 mt-5" v-loading="loading">
+    <!-- <div
       @click="showForm = !showForm"
       class="d-flex justify-content-end add-new-button mb-5"
     >
@@ -8,25 +8,29 @@
         <i class="el-icon-plus"></i>
       </div>
       <div class="add-new-title">Add Project</div>
-    </div>
-
-    <div class="d-flex title" v-if="!_.isEmpty(projects)">
-      <div class="col-md-2">Created At</div>
-      <div class="col-md-5">Name</div>
-      <div class="col-md-2">By Who</div>
+    </div> -->
+    <div class="page-title">Projects</div>
+    <div class="row title mt-5" v-if="!_.isEmpty(projects)">
+      <div class="col-md">Name</div>
+      <div class="col-md-2">Date</div>
       <div class="col-md-2">Comments</div>
       <div class="col-md-1"></div>
     </div>
-    <div v-loading="loading">
-      <div class="d-flex mt-3" v-for="(project, key) in projects" :key="key">
+    <div>
+      <div class="row mt-3" v-for="(project, key) in projects" :key="key">
+        <div class="col-md name">
+          <div>{{ project.name }}</div>
+          <div class="created-by">{{ project.created_by }}</div>
+        </div>
         <div class="col-md-2 created-at">
           {{ $moment(project.created_at).format("YYYY-MM-DD") }}
         </div>
-        <div class="col-md-5 name">{{ project.name }}</div>
-        <div class="col-md-2 created-by">{{ project.created_by }}</div>
-        <div class="col-md-2 comment">{{ project.comments.length }}</div>
+
+        <div class="col-md-2 comment text-center">
+          {{ project.comments.length }}
+        </div>
         <div class="col-md-1">
-          <i class="fa fa-external-link fa-2x align-self-center "></i>
+          <i class="fa fa-external-link align-self-center "></i>
         </div>
       </div>
     </div>
@@ -68,30 +72,35 @@ export default {
   font-family: var(--roboto);
   color: var(--darkgrey);
   font-weight: bold;
+  font-size: var(--text-xs);
 }
 
 .created-at {
   font-weight: bold;
   font-family: var(--roboto);
   color: var(--orange);
+  font-size: var(--text-xs);
 }
 
 .name {
   font-weight: bold;
   font-family: var(--roboto);
-  color: var(--darkgrey);
+  color: var(--gray);
+  font-size: var(--text-xs);
 }
 
 .created-by {
   font-weight: bold;
-  font-family: var(--roboto-mono);
+  font-family: var(--roboto);
   color: var(--darkgrey);
+  font-size: var(--text-xs);
 }
 
 .comment {
   font-weight: bold;
   font-family: var(--roboto-mono);
   color: var(--darkgrey);
+  font-size: var(--text-xs);
 }
 
 .add-new-icon {
@@ -113,5 +122,9 @@ export default {
   font-size: 20px;
   font-family: var(--roboto-mono);
   font-weight: bold;
+}
+
+.project {
+  min-height: 80vh;
 }
 </style>
